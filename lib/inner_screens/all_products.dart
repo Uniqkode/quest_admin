@@ -46,7 +46,7 @@ class _AllProductsScreenState extends State<AllProductsScreen> {
                               .read<menucont.MenuController>()
                               .controlProductsMenu();
                         },
-                        title: 'All products',
+                        title: 'All transactions',
                       ),
                       const SizedBox(
                         height: 25,

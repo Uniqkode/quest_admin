@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 
 import '../consts/constants.dart';
 import '../controllers/MenuController.dart' as menucont;
-import '../inner_screens/add_prod.dart';
+import '../inner_screens/review_loan.dart';
 import '../responsive.dart';
 import '../services/utils.dart';
 import '../widgets/buttons.dart';
@@ -30,13 +30,13 @@ class DashboardScreen extends StatelessWidget {
               fct: () {
                 context.read<menucont.MenuController>().controlDashboarkMenu();
               },
-              title: 'Dashboard',
+              title: 'Admin Dashboard',
             ),
             const SizedBox(
               height: 20,
             ),
             TextWidget(
-              text: 'Latest Products',
+              text: 'Loan Applications',
               color: color,
             ),
             const SizedBox(
@@ -61,7 +61,7 @@ class DashboardScreen extends StatelessWidget {
                           ),
                         );
                       },
-                      text: 'Add product',
+                      text: 'Pending Loans',
                       icon: Icons.add,
                       backgroundColor: Colors.blue),
                 ],

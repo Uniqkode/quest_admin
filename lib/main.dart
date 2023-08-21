@@ -4,7 +4,7 @@ import 'package:quest_admin/screens/main_screen.dart';
 
 import 'consts/theme_data.dart';
 import '../controllers/MenuController.dart' as menucont;
-import 'inner_screens/add_prod.dart';
+import 'inner_screens/review_loan.dart';
 import 'providers/dark_theme_provider.dart';
 
 void main() {

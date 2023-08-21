@@ -34,9 +34,8 @@ class _OrdersWidgetState extends State<OrdersWidget> {
             children: [
               Flexible(
                 flex: size.width < 650 ? 3 : 1,
-                child: Image.network(
-                  'https://www.lifepng.com/wp-content/uploads/2020/11/Apricot-Large-Single-png-hd.png',
-
+                child: Image.asset(
+                  'assets/money.png',
                   fit: BoxFit.fill,
                   // height: screenWidth * 0.15,
                   // width: screenWidth * 0.15,

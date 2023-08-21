@@ -19,10 +19,12 @@ class OrdersList extends StatelessWidget {
           shrinkWrap: true,
           itemCount: 10,
           itemBuilder: (ctx, index) {
-            return Column(
-              children: const [
+            return const Column(
+              children: [
                 OrdersWidget(),
-                Divider(thickness: 3,),
+                Divider(
+                  thickness: 3,
+                ),
               ],
             );
           }),

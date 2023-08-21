@@ -87,7 +87,7 @@ class _UploadProductFormState extends State<UploadProductForm> {
                         fct: () {
                           context
                               .read<menucont.MenuController>()
-                              .controlAddProductsMenu();
+                              .controlloanMenu();
                         },
                         title: 'Add product',
                         showTexField: false),

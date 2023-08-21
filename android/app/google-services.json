@@ -1,0 +1,91 @@
+{
+  "project_info": {
+    "project_number": "482300859105",
+    "firebase_url": "https://quest-c990d-default-rtdb.firebaseio.com",
+    "project_id": "quest-c990d",
+    "storage_bucket": "quest-c990d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:482300859105:android:edbd2c6428fa5d76d71da0",
+        "android_client_info": {
+          "package_name": "com.example.flutter_finance_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "482300859105-g7qdaucfesiglgg79tpb53mt74at6db1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.flutter_finance_app",
+            "certificate_hash": "6cc2f2f8993c025c0c507eddd5ddbd5d094bd0fd"
+          }
+        },
+        {
+          "client_id": "482300859105-jdr4hfrr6t4auo2ef0j2ndqh79d1hf97.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB76A6UIwvxzsZmYCNeLAUbWvGFMUBQ6ew"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "482300859105-6p5i079anmn5v110log7l7s88ft3n60d.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "482300859105-v4mmr4gqoa4ocidan782njf5vpufu8bm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.flutterFinanceApp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:482300859105:android:614429996092f0bbd71da0",
+        "android_client_info": {
+          "package_name": "com.example.quest_admin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "482300859105-jdr4hfrr6t4auo2ef0j2ndqh79d1hf97.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB76A6UIwvxzsZmYCNeLAUbWvGFMUBQ6ew"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "482300859105-6p5i079anmn5v110log7l7s88ft3n60d.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "482300859105-v4mmr4gqoa4ocidan782njf5vpufu8bm.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.flutterFinanceApp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

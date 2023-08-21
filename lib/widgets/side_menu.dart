@@ -45,7 +45,7 @@ class _SideMenuState extends State<SideMenu> {
             icon: Icons.home_filled,
           ),
           DrawerListTile(
-            title: "View all products",
+            title: "View loan request",
             press: () {
               Navigator.pushReplacement(
                   context,
@@ -55,7 +55,7 @@ class _SideMenuState extends State<SideMenu> {
             icon: Icons.store,
           ),
           DrawerListTile(
-            title: "View all orders",
+            title: "View rejected",
             press: () {
               Navigator.pushReplacement(
                   context,

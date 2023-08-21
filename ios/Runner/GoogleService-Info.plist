@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>482300859105-0kfatdmafsbe0rs9mqacgb5bklqerbra.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.482300859105-0kfatdmafsbe0rs9mqacgb5bklqerbra</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>482300859105-g7qdaucfesiglgg79tpb53mt74at6db1.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBjzV3p4XQG5w3DnaK4ABK48prqG_bPRVE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>482300859105</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.questAdmin</string>
+	<key>PROJECT_ID</key>
+	<string>quest-c990d</string>
+	<key>STORAGE_BUCKET</key>
+	<string>quest-c990d.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:482300859105:ios:ee06a244d9877ac9d71da0</string>
+	<key>DATABASE_URL</key>
+	<string>https://quest-c990d-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>

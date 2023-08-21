@@ -16,8 +16,8 @@ class Header extends StatelessWidget {
   final bool showTexField;
   @override
   Widget build(BuildContext context) {
-    final theme = Utils(context).getTheme;
-    final color = Utils(context).color;
+    // final theme = Utils(context).getTheme;
+    // final color = Utils(context).color;
 
     return Row(
       children: [

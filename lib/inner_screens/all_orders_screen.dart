@@ -49,7 +49,7 @@ class _AllOrdersScreenState extends State<AllOrdersScreen> {
                               .read<menucont.MenuController>()
                               .controlAllOrder();
                         },
-                        title: 'All Orders',
+                        title: 'All Loan request',
                       ),
                       const SizedBox(
                         height: 20,

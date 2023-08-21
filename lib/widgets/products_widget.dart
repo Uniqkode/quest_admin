@@ -38,8 +38,8 @@ class _ProductWidgetState extends State<ProductWidget> {
                   children: [
                     Flexible(
                       flex: 3,
-                      child: Image.network(
-                        'https://www.lifepng.com/wp-content/uploads/2020/11/Apricot-Large-Single-png-hd.png',
+                      child: Image.asset(
+                        'assets/money.png',
                         fit: BoxFit.fill,
                         // width: screenWidth * 0.12,
                         height: size.width * 0.12,
@@ -50,16 +50,16 @@ class _ProductWidgetState extends State<ProductWidget> {
                         itemBuilder: (context) => [
                               PopupMenuItem(
                                 onTap: () {},
-                                child: Text('Edit'),
                                 value: 1,
+                                child: const Text('Edit'),
                               ),
                               PopupMenuItem(
                                 onTap: () {},
-                                child: Text(
-                                  'Delete',
+                                value: 2,
+                                child: const Text(
+                                  'Reject',
                                   style: TextStyle(color: Colors.red),
                                 ),
-                                value: 2,
                               ),
                             ])
                   ],
@@ -70,24 +70,16 @@ class _ProductWidgetState extends State<ProductWidget> {
                 Row(
                   children: [
                     TextWidget(
-                      text: '\$1.99',
+                      text: '\$5000',
                       color: color,
                       textSize: 18,
                     ),
                     const SizedBox(
                       width: 7,
                     ),
-                    Visibility(
-                        visible: true,
-                        child: Text(
-                          '\$3.89',
-                          style: TextStyle(
-                              decoration: TextDecoration.lineThrough,
-                              color: color),
-                        )),
                     const Spacer(),
                     TextWidget(
-                      text: '1Kg',
+                      text: '6 months',
                       color: color,
                       textSize: 18,
                     ),

@@ -8,7 +8,7 @@ class ProductGridWidget extends StatelessWidget {
       {Key? key,
       this.crossAxisCount = 4,
       this.childAspectRatio = 1,
-       this.isInMain = true})
+      this.isInMain = true})
       : super(key: key);
   final int crossAxisCount;
   final double childAspectRatio;
@@ -26,7 +26,7 @@ class ProductGridWidget extends StatelessWidget {
           mainAxisSpacing: defaultPadding,
         ),
         itemBuilder: (context, index) {
-          return ProductWidget();
+          return const ProductWidget();
         });
   }
 }
