@@ -4,8 +4,8 @@ import 'package:intl/intl.dart';
 import 'package:flutter_datetime_picker_bdaya/flutter_datetime_picker_bdaya.dart';
 
 class LoanReviewModel extends StatelessWidget {
-  final dynamic order;
-  const LoanReviewModel({Key? key, required this.order}) : super(key: key);
+  final dynamic loans;
+  const LoanReviewModel({Key? key, required this.loans}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +26,7 @@ class LoanReviewModel extends StatelessWidget {
                   child: Container(
                     constraints:
                         const BoxConstraints(maxHeight: 80, maxWidth: 80),
-                    child: Image.network(order['profile']),
+                    child: Image.network(loans['profileimage']),
                   ),
                 ),
                 Flexible(
@@ -34,7 +34,7 @@ class LoanReviewModel extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      order['ordername'],
+                     loans['borrname'],
                       overflow: TextOverflow.ellipsis,
                       maxLines: 2,
                       style: TextStyle(
@@ -47,8 +47,8 @@ class LoanReviewModel extends StatelessWidget {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text(('\$ ') + (order['orderprice'].toString())),
-                          Text(('x ') + (order['orderqty'].toString()))
+                          Text((loans['loanamount'].toString())),
+                          Text(('x ') + (loans['orderqty'].toString()))
                         ],
                       ),
                     )
@@ -61,7 +61,7 @@ class LoanReviewModel extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               const Text('See More ...'),
-              Text(order['deliverystatus'])
+              Text(loans['deliverystatus'])
             ],
           ),
           children: [
@@ -77,19 +77,19 @@ class LoanReviewModel extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      ('Name: ') + (order['custname']),
+                      ('Name: ') + (loans['custname']),
                       style: const TextStyle(fontSize: 15),
                     ),
                     Text(
-                      ('Phone No: ') + (order['phone']),
+                      ('Phone No: ') + (loans['phone']),
                       style: const TextStyle(fontSize: 15),
                     ),
                     Text(
-                      ('Email Address: ') + (order['email']),
+                      ('Email Address: ') + (loans['email']),
                       style: const TextStyle(fontSize: 15),
                     ),
                     Text(
-                      ('Address: ') + (order['address']),
+                      ('Address: ') + (loans['address']),
                       style: const TextStyle(fontSize: 15),
                     ),
                     Row(
@@ -99,7 +99,7 @@ class LoanReviewModel extends StatelessWidget {
                           style: TextStyle(fontSize: 15),
                         ),
                         Text(
-                          (order['paymentstatus']),
+                          (loans['paymentstatus']),
                           style: const TextStyle(
                               fontSize: 15, color: Colors.purple),
                         ),
@@ -112,7 +112,7 @@ class LoanReviewModel extends StatelessWidget {
                           style: TextStyle(fontSize: 15),
                         ),
                         Text(
-                          (order['deliverystatus']),
+                          (loans['deliverystatus']),
                           style: const TextStyle(
                               fontSize: 15, color: Colors.green),
                         ),
@@ -126,14 +126,14 @@ class LoanReviewModel extends StatelessWidget {
                         ),
                         Text(
                           (DateFormat('yyyy-MM-dd')
-                                  .format(order['orderdate'].toDate()))
+                                  .format(loans['orderdate'].toDate()))
                               .toString(),
                           style: const TextStyle(
                               fontSize: 15, color: Colors.green),
                         ),
                       ],
                     ),
-                    order['deliverystatus'] == 'delivered'
+                    loans['deliverystatus'] == 'delivered'
                         ? const Text('This item is delivered')
                         : Row(
                             children: [
@@ -141,7 +141,7 @@ class LoanReviewModel extends StatelessWidget {
                                 ('Change delivery status to: '),
                                 style: TextStyle(fontSize: 15),
                               ),
-                              order['deliverystatus'] == 'preparing'
+                              loans['deliverystatus'] == 'preparing'
                                   ? TextButton(
                                       onPressed: () {
                                         DatePickerBdaya.showDatePicker(context,
@@ -151,7 +151,7 @@ class LoanReviewModel extends StatelessWidget {
                                             onConfirm: (date) async {
                                           await FirebaseFirestore.instance
                                               .collection('orders')
-                                              .doc(order['orderid'])
+                                              .doc(loans['orderid'])
                                               .update({
                                             'deliverystatus': 'shipping',
                                             'deliverydate': date,
@@ -163,7 +163,7 @@ class LoanReviewModel extends StatelessWidget {
                                       onPressed: () async {
                                         await FirebaseFirestore.instance
                                             .collection('orders')
-                                            .doc(order['orderid'])
+                                            .doc(loans['orderid'])
                                             .update({
                                           'deliverystatus': 'delivered'
                                         });

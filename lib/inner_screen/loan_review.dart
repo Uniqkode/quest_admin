@@ -50,7 +50,7 @@ class _LoanApprovalPageState extends State<LoanApprovalPage> {
             if (snapshot.data!.docs.isEmpty) {
               return const Center(
                 child: Text(
-                  'No Active Orders',
+                  'No Active loans',
                   style: TextStyle(
                       letterSpacing: 1.5,
                       fontFamily: 'Acme',
@@ -64,7 +64,7 @@ class _LoanApprovalPageState extends State<LoanApprovalPage> {
             return ListView.builder(
                 itemCount: snapshot.data!.docs.length,
                 itemBuilder: (context, index) {
-                  return LoanReviewModel(order: snapshot.data!.docs[index]);
+                  return LoanReviewModel(loans: snapshot.data!.docs[index]);
                 });
           },
         ));
