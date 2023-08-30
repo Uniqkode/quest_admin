@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:quest_admin/screens/main_screen.dart';
+import 'package:quest_admin/inner_screen/loan_review.dart';
+import 'package:quest_admin/pages/admin_approval.dart';
 
 import 'consts/theme_data.dart';
-import '../controllers/MenuController.dart' as menucont;
-import 'inner_screens/review_loan.dart';
 import 'providers/dark_theme_provider.dart';
 
 void main() {
@@ -37,7 +36,7 @@ class _MyAppState extends State<MyApp> {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(
-          create: (_) => menucont.MenuController(),
+          create: (_) =>DarkThemeProvider(),
         ),
         ChangeNotifierProvider(
           create: (_) {
@@ -49,12 +48,12 @@ class _MyAppState extends State<MyApp> {
         builder: (context, themeProvider, child) {
           return MaterialApp(
               debugShowCheckedModeBanner: false,
-              title: 'Grocery',
+              title: 'Loan Admin',
               theme: Styles.themeData(themeProvider.getDarkTheme, context),
-              home: const MainScreen(),
+              home: const LoanApprovalPage(),
               routes: {
-                UploadProductForm.routeName: (context) =>
-                    const UploadProductForm(),
+                LoanReviewPage.routeName: (context) =>
+                    const LoanReviewPage(),
               });
         },
       ),

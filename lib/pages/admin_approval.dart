@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:quest_admin/pages/appproved_loan.dart';
+import 'package:quest_admin/pages/pending_loan.dart';
+import 'package:quest_admin/pages/rejected_loans.dart';
 
 class LoanApprovalPage extends StatefulWidget {
   const LoanApprovalPage({super.key});
@@ -18,11 +21,31 @@ class _LoanApprovalPageState extends State<LoanApprovalPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Loan Approval'),
+    return DefaultTabController(
+      length: 3,
+      child: Scaffold(
+        appBar: AppBar(
+          centerTitle: true,
+          elevation: 0,
+          leading: Container(),
+          backgroundColor: Colors.white,
+          title: const Text('Admin Dashboard'),
+          bottom: const TabBar(
+            tabs: [
+              RepeatedTabs(label: 'Pending'),
+              RepeatedTabs(label: 'Approved'),
+              RepeatedTabs(label: 'Rejected'),
+            ],
+            indicatorColor: Colors.yellow,
+            indicatorWeight: 8,
+          ),
+        ),
+        body: const TabBarView(children: [
+          PendingLoans(),
+          ApprovedLoans(),
+          RejectedLoans(),
+        ]),
       ),
-      body: _buildLoanApplicationsList(),
     );
   }
 
@@ -67,4 +90,22 @@ class LoanApplication {
       {required this.borrowerName,
       required this.loanAmount,
       required this.status});
+}
+
+class RepeatedTabs extends StatelessWidget {
+  final String label;
+  const RepeatedTabs({
+    required this.label,
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Tab(
+      child: Text(
+        label,
+        style: TextStyle(color: Colors.grey.shade600),
+      ),
+    );
+  }
 }

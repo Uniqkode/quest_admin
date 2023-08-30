@@ -3,14 +3,14 @@ import 'package:flutter/material.dart';
 
 import '../models/loanreview_model.dart';
 
-class LoanApprovalPage extends StatefulWidget {
-  const LoanApprovalPage({super.key});
+class LoanReviewPage extends StatefulWidget {
+  const LoanReviewPage({super.key});
 
   @override
-  _LoanApprovalPageState createState() => _LoanApprovalPageState();
+  _LoanReviewPageState createState() => _LoanReviewPageState();
 }
 
-class _LoanApprovalPageState extends State<LoanApprovalPage> {
+class _LoanReviewPageState extends State<LoanReviewPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,7 +20,7 @@ class _LoanApprovalPageState extends State<LoanApprovalPage> {
         body: StreamBuilder<QuerySnapshot>(
           stream: FirebaseFirestore.instance
               .collection('loans')
-              .where('deliverystatus', isEqualTo: 'preparing')
+              .where('loanstatus', isEqualTo: 'pending')
               .snapshots(),
           builder:
               (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
