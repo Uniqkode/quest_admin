@@ -34,7 +34,7 @@ class LoanReviewModel extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                     loans['borrname'],
+                      loans['borrname'],
                       overflow: TextOverflow.ellipsis,
                       maxLines: 2,
                       style: TextStyle(
@@ -47,7 +47,10 @@ class LoanReviewModel extends StatelessWidget {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text((loans['loanamount'].toString())),
+                          Text(
+                            ('Email Address: ') + (loans['email']),
+                            style: const TextStyle(fontSize: 15),
+                          ),
                           Text(('x ') + (loans['orderqty'].toString()))
                         ],
                       ),
@@ -59,10 +62,7 @@ class LoanReviewModel extends StatelessWidget {
           ),
           subtitle: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              const Text('See More ...'),
-              Text(loans['deliverystatus'])
-            ],
+            children: [const Text('See More ...'), Text(loans['loanstatus'])],
           ),
           children: [
             Container(
@@ -77,7 +77,7 @@ class LoanReviewModel extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      ('Name: ') + (loans['custname']),
+                      ('Name: ') + (loans['borrname']),
                       style: const TextStyle(fontSize: 15),
                     ),
                     Text(
@@ -108,7 +108,7 @@ class LoanReviewModel extends StatelessWidget {
                     Row(
                       children: [
                         const Text(
-                          ('Delivery Status: '),
+                          ('Loan Status: '),
                           style: TextStyle(fontSize: 15),
                         ),
                         Text(
@@ -121,12 +121,12 @@ class LoanReviewModel extends StatelessWidget {
                     Row(
                       children: [
                         const Text(
-                          ('Order date: '),
+                          ('loan application date: '),
                           style: TextStyle(fontSize: 15),
                         ),
                         Text(
                           (DateFormat('yyyy-MM-dd')
-                                  .format(loans['orderdate'].toDate()))
+                                  .format(loans['loandate'].toDate()))
                               .toString(),
                           style: const TextStyle(
                               fontSize: 15, color: Colors.green),
